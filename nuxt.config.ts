@@ -5,5 +5,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/ui',
     '@nuxt/image',
+    ['@nuxtjs/google-fonts', {
+      families: {
+        'Outfit': [400, 700]
+      }
+    }]
   ],
+  css: ['~/assets/css/main.css']
 })
