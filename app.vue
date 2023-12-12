@@ -5,22 +5,11 @@
 </script>
 
 <template>
-  <UContainer>
-    <div class="container mx-auto flex justify-end py-9 items-center">
-      <div v-if="isAuthenticated" class="flex items-center gap-x-1.5">
-
-        <UButton 
-          @click=""
-
-          icon="i-heroicons-cog-8-tooth"
-          />
-        <UButton 
-          @click="useSignOut"
-          label="Uitloggen"
-        />
-      </div>
+  <div class="flex">
+    <SideBar v-if="isAuthenticated"/>
+    <div class="container flex justify-end py-9 items-center flex-grow">
+      <NuxtPage />
     </div>
-    <NuxtPage />
-  </UContainer>
+  </div>
   <UNotifications />
 </template>

@@ -14,6 +14,7 @@ export const useSignIn = () => {
       color: 'slate',
     })
     return navigateTo('/dashboard')
-
+  }).then(() => {
+    useProfileImage(auth.currentUser.photoURL)
   })
 }

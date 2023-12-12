@@ -1,6 +1,10 @@
 <template>
     <div>
         Profile
+
+        <div class="" v-if="isAuthenticated">
+
+        </div>
     </div>
 </template>
 

@@ -1,10 +1,6 @@
 <template>
     <UContainer>
-        <div class="container mx-auto">
-            <UCard v-if="isAuthenticated">{{ user.displayName }}</UCard>
-        </div>
-        <img src="/jungle2.jpg" />
-        <TopNav />
+        <UCard v-if="isAuthenticated">{{ user.displayName }}</UCard>
     </UContainer>
 </template>
 
