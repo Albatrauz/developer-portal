@@ -1,6 +1,6 @@
 <template>
     <div>
-        Profile
+        <SideBar v-if="isAuthenticated"/>
 
         <div class="" v-if="isAuthenticated">
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-slate-800 pl-3 py-8 w-[300px] h-screen">
+    <div class="h-screen border-r border-solid border-slate-700 px-6 py-12">
         <UVerticalNavigation :links="links" :ui="ui" />
     </div>
 </template>
@@ -15,8 +15,7 @@
             "base": "flex-shrink-0 w-5 h-5 mr-1.5",
         },
         "avatar": {
-            "base": "mr-1.5",
-            "size": "w-3 h-3"
+            "base": "mr-1.5"
         }
         // "base": "dark:bg-red-500"
     }

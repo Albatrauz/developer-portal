@@ -1,6 +1,17 @@
 <script setup>
+    import { useStorage } from '@vueuse/core'
     definePageMeta({
         middleware: 'auth'
+    })
+    const toast = useToast();
+    const name = useStorage('savedName');
+    
+    watch(isAuthenticated, (isAuthenticated) => {
+        if (isAuthenticated) {
+            toast.add({
+                title: `Welcome back ${name.value}`,
+            })
+        }
     })
 </script>
 <template>
@@ -15,7 +26,7 @@
                     {{ user }}
                 </div>
             </template>
-            Test
+            <div @click="useSignOut">Test</div>
         </UCard>
     </UContainer>
 </template>

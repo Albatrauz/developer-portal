@@ -5,7 +5,15 @@
 </template>
 
 <script setup>
+    definePageMeta({
+        middleware: 'auth'
+    })
 
+    if (isAuthenticated) {
+        navigateTo('/dashboard');
+    } else {
+        navigateTo('/login');
+    }
 </script>
 
 <style lang="scss" scoped>
